@@ -1,9 +1,12 @@
 package com.bachdv.lib.common.api;
 
+import lombok.Getter;
+
 /**
  * @author BachDV
  * Date : 22/03/2022
  */
+@Getter
 public enum ResultCode implements IErrorCode{
     SUCCESS(200, "SUCCESS"),
     FAILED(500, "FAILED"),
@@ -19,12 +22,4 @@ public enum ResultCode implements IErrorCode{
         this.message = message;
     }
 
-
-    public long getCode() {
-        return code;
-    }
-
-    public String getMessage() {
-        return message;
-    }
 }
