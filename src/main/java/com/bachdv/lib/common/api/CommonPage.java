@@ -1,15 +1,14 @@
 package com.bachdv.lib.common.api;
 
-import io.netty.util.internal.StringUtil;
 import lombok.Data;
 import lombok.ToString;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Sort;
+import org.springframework.http.HttpRequest;
 
-import java.util.Collections;
 import java.util.List;
 
 /**
+ * Paging data encapsulation class
  * @author BachDV
  * Date : 22/03/2022
  */
@@ -17,108 +16,89 @@ import java.util.List;
 @Data
 public class CommonPage<T> {
 
-    private Sort sort;
-    private transient int offset;
-    private transient int limit;
-    private int total;
-    private int size = 10;
-    private int pages;
-    private int current = 1;
-    private transient boolean searchCount = true;
+    /**
+     * current page number
+     */
+    private Integer pageNum;
+    /**
+     * 每页数量
+     */
+    private Integer pageSize;
+    /**
+     * Quantity per page
+     */
+    private Integer totalPage;
+    /**
+     * total number
+     */
+    private Long total;
+    /**
+     * paginated data
+     */
+    private List<T> list;
 
-    private List<T> records = Collections.emptyList();
-
-
-    public CommonPage() {
-
+    /**
+     * Convert the list after PageHelper paging into paging information
+     */
+    public static <T> CommonPage<T> restPage(HttpRequest request, List<T> list) {
+        CommonPage<T> result = new CommonPage<T>();
+        result.setPageSize(list.size());
+        result.setTotal((long) list.size());
+        result.setList(list);
+        return result;
     }
 
-    public CommonPage(int current, int size, String orderByField) {
-        this(current,size,orderByField,true);
+    /**
+     * Convert SpringData paginated list to paging information
+     */
+    public static <T> CommonPage<T> restPage(Page<T> pageInfo) {
+        CommonPage<T> result = new CommonPage<T>();
+        result.setTotalPage(pageInfo.getTotalPages());
+        result.setPageNum(pageInfo.getNumber());
+        result.setPageSize(pageInfo.getSize());
+        result.setTotal(pageInfo.getTotalElements());
+        result.setList(pageInfo.getContent());
+        return result;
     }
 
-    public CommonPage(int current, int size, String orderByField, boolean isAsc) {
-        this(current, size);
-        setSort(Sort.by(isAsc? Sort.Direction.ASC: Sort.Direction.DESC,orderByField));
-
+    public Integer getPageNum() {
+        return pageNum;
     }
 
-    public CommonPage(int current, int size) {
-        this(current,size,true);
+    public void setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
     }
 
-
-    public CommonPage(int current, int size, boolean searchCount) {
-
-        setOffset(offsetCurrent(current, size));
-        setLimit(size);
-        if (current > 1) {
-            this.current = current;
-        }
-        this.size = size;
-        this.searchCount = searchCount;
+    public Integer getPageSize() {
+        return pageSize;
     }
 
-    protected static int offsetCurrent(int current, int size) {
-        if (current > 0) {
-            return (current - 1) * size;
-        }
-        return 0;
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
     }
 
-    public int offsetCurrent() {
-        return offsetCurrent(this.current, this.size);
+    public Integer getTotalPage() {
+        return totalPage;
     }
 
-    public boolean hasPrevious() {
-        return this.current > 1;
+    public void setTotalPage(Integer totalPage) {
+        this.totalPage = totalPage;
     }
 
-    public boolean hasNext() {
-        return this.current < this.pages;
+    public List<T> getList() {
+        return list;
     }
 
+    public void setList(List<T> list) {
+        this.list = list;
+    }
 
-    public CommonPage setTotal(int total) {
+    public Long getTotal() {
+        return total;
+    }
+
+    public void setTotal(Long total) {
         this.total = total;
-        return this;
-    }
-
-
-    public CommonPage setSize(int size) {
-        this.size = size;
-        return this;
-    }
-
-    public int getPages() {
-        if (this.size == 0) {
-            return 0;
-        }
-        this.pages = this.total / this.size;
-        if (this.total % this.size != 0) {
-            this.pages++;
-        }
-        return this.pages;
-    }
-
-    public CommonPage setSearchCount(boolean searchCount) {
-        this.searchCount = searchCount;
-        return this;
-    }
-
-    public CommonPage setOffset(int offset) {
-        this.offset = offset;
-        return this;
-    }
-
-    public CommonPage setLimit(int limit) {
-        this.limit = limit;
-        return this;
-    }
-
-    public CommonPage<T> setRecords(List<T> records) {
-        this.records = records;
-        return this;
     }
 
 }
