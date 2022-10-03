@@ -5,52 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82226c1a-6557-4495-b98d-eb875b3c4b9d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/aspect/AutoLogAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/aspect/annotation/AutoLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/query/Page.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/query/state/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/redis/BaseRedis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/repository/BaseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/repository/BaseRepositoryFactoryBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/repository/BaseRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/service/BaseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/service/CrudService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/service/DeleteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/service/InsertService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/service/SelectService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/service/UpdateService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/swagger/BaseSwaggerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/util/BeanUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/util/Lists.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/util/MyHttpUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/util/ObjectMapperUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/util/SpringUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/util/WafKit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/util/WafRequestWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/task/model/BaseTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/task/model/QuartzJobDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/task/service/JobExecutor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/task/service/JobService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/task/service/impl/BaseJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/task/service/impl/JobExecutorImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/task/service/impl/JobServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/api/CommonPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/api/CommonPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/api/CommonResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/api/CommonResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/api/IErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/api/IErrorCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/api/ResultCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/api/ResultCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/bean/DynamicSpecifications.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/query/DynamicSpecifications.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/bean/SearchFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/query/SearchFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/bean/SimpleSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/query/SimpleSpecification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/config/BaseRedisConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/config/BaseSwaggerConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/domain/SwaggerProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/swagger/SwaggerProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/domain/WebLog.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/exception/ApiException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/exception/ApiException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/exception/Asserts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/exception/Asserts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/log/WebLogAspect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/service/RedisService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/service/impl/RedisServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/util/Maps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/util/Maps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/util/RequestUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/util/RequestUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/util/SearchUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/util/SearchUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/util/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/util/StringUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -80,6 +44,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/marco.duong/Desktop/Github/spring-common/src/main/java/com/bachdv/lib/common",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -100,7 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1659278052772</updated>
       <workItem from="1659278054253" duration="2736000" />
-      <workItem from="1664769074410" duration="734000" />
+      <workItem from="1664769074410" duration="4750000" />
     </task>
     <servers />
   </component>
