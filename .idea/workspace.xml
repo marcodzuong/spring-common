@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82226c1a-6557-4495-b98d-eb875b3c4b9d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/task/model/BaseTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/task/model/QuartzJobDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/task/service/JobExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/task/service/JobService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/task/service/impl/BaseJob.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/task/service/impl/JobExecutorImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/task/service/impl/JobServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/task/service/impl/JobServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bachdv/lib/common/task/service/impl/JobServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +58,7 @@
       <option name="presentableId" value="Default" />
       <updated>1659278052772</updated>
       <workItem from="1659278054253" duration="2736000" />
-      <workItem from="1664769074410" duration="4750000" />
+      <workItem from="1664769074410" duration="5408000" />
     </task>
     <servers />
   </component>
