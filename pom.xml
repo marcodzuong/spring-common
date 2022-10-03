@@ -14,7 +14,9 @@
 	<name>common</name>
 	<description>Spring Boot Common</description>
 	<properties>
+		<modelmapper.version>2.3.0</modelmapper.version>
 		<java.version>1.8</java.version>
+		<nutz.version>1.r.60</nutz.version>
 	</properties>
 	<dependencies>
 <!--		<dependency>-->
@@ -28,6 +30,18 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+			<version>${modelmapper.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.nutz</groupId>
+			<artifactId>nutz</artifactId>
+			<version>${nutz.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.data</groupId>

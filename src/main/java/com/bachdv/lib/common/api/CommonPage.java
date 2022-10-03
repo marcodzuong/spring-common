@@ -10,7 +10,6 @@ import java.util.List;
 /**
  * Paging data encapsulation class
  * @author BachDV
- * Date : 22/03/2022
  */
 @ToString
 @Data

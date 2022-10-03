@@ -1,8 +1,5 @@
 package com.bachdv.lib.common.util;
 
-import com.bachdv.lib.common.bean.DynamicSpecifications;
-import org.springframework.data.domain.Pageable;
-
 /**
  * @author bachdv
  */

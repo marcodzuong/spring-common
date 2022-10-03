@@ -1,4 +1,4 @@
-package com.bachdv.lib.common.domain;
+package com.bachdv.lib.common.swagger;
 
 import lombok.Builder;
 import lombok.Data;
@@ -6,7 +6,6 @@ import lombok.EqualsAndHashCode;
 
 /**
  * @author BachDV
- * Date : 22/03/2022
  */
 
 @Data
@@ -45,4 +44,9 @@ public class SwaggerProperties {
      * Document Contact Email
      */
     private String contactEmail;
+    /**
+     * Document terms Url
+     */
+    private String termsOfServiceUrl;
 }
+

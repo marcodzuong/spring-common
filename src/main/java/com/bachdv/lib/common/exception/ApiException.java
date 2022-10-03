@@ -1,12 +1,12 @@
 package com.bachdv.lib.common.exception;
 
+
 import com.bachdv.lib.common.api.IErrorCode;
 
 /**
  * Custom API exception
  *
  * @author BachDV
- * Date : 22/03/2022
  */
 public class ApiException extends RuntimeException {
 

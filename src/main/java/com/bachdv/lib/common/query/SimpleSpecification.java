@@ -1,18 +1,18 @@
-package com.bachdv.lib.common.bean;
+package com.bachdv.lib.common.query;
 
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.util.StringUtils;
 
+import javax.persistence.criteria.*;
 import java.util.Collection;
 import java.util.Date;
-import javax.persistence.criteria.*;
 
 /**
  * @author bachdv
  */
 public class SimpleSpecification <T> implements Specification<T> {
 
-    private Collection<SearchFilter> filters;
+    private final Collection<SearchFilter> filters;
 
     public SimpleSpecification(Collection<SearchFilter> operators) {
         this.filters = operators;

@@ -1,9 +1,9 @@
 package com.bachdv.lib.common.api;
 
 import lombok.Data;
+
 /**
  * @author BachDV
- * Date : 23/03/2022
  */
 @Data
 public class CommonResult<T> {
@@ -19,9 +19,6 @@ public class CommonResult<T> {
      * data encapsulation
      */
     private T data;
-
-    protected CommonResult() {
-    }
 
     protected CommonResult(long code, String message, T data) {
         this.code = code;
@@ -41,8 +38,8 @@ public class CommonResult<T> {
     /**
      * return result successfully
      *
-     * @param data acquired data
-     * @param  message message
+     * @param data    acquired data
+     * @param message message
      */
     public static <T> CommonResult<T> success(T data, String message) {
         return new CommonResult<T>(ResultCode.SUCCESS.getCode(), message, data);
@@ -50,6 +47,7 @@ public class CommonResult<T> {
 
     /**
      * return result on failure
+     *
      * @param errorCode error code data
      */
     public static <T> CommonResult<T> failed(IErrorCode errorCode) {
@@ -58,6 +56,7 @@ public class CommonResult<T> {
 
     /**
      * return result on failure
+     *
      * @param message message
      */
     public static <T> CommonResult<T> failed(String message) {
@@ -73,6 +72,7 @@ public class CommonResult<T> {
 
     /**
      * 参数验证失败返回结果
+     *
      * @param message 提示信息
      */
     public static <T> CommonResult<T> validateFailed(String message) {

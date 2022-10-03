@@ -1,10 +1,13 @@
-package com.bachdv.lib.common.bean;
+package com.bachdv.lib.common.query;
+
 
 import com.bachdv.lib.common.util.Maps;
 import com.bachdv.lib.common.util.StringUtil;
 
 import java.util.Map;
-
+/**
+ * @author BachDV
+ */
 public class SearchFilter {
     public enum Operator {
         EQ, NE, LIKE, LIKEL, LIKER, GT, LT, GTE, LTE, IN, NOTIN, ISNULL, ISNOTNULL, BETWEEN
