@@ -129,7 +129,7 @@ public abstract class BaseService<DOMAIN, ID, R extends BaseRepository<DOMAIN, I
         return page;
     }
     public <DTO> Page<DTO> queryPageDto(Page<DTO> page, Class<DTO> outCLass) {
-        Pageable pageable = null;
+        Pageable pageable ;
         if (page.getSort() != null) {
             pageable = PageRequest.of(page.getCurrent() - 1, page.getSize(), page.getSort());
         } else {

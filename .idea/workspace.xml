@@ -36,12 +36,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/marco.duong/Desktop/Github/spring-common/src/main/java/com/bachdv/lib/common",
+    "last_opened_file_path": "C:/Users/marco.duong/Desktop/Github/spring-securiry",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "fileTemplates"
+    "settings.editor.selected.configurable": "fileTemplates",
+    "spring.configuration.checksum": "3aeab2a5559b79ca336403a033250f6c"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -58,7 +59,8 @@
       <option name="presentableId" value="Default" />
       <updated>1659278052772</updated>
       <workItem from="1659278054253" duration="2736000" />
-      <workItem from="1664769074410" duration="5408000" />
+      <workItem from="1664769074410" duration="6781000" />
+      <workItem from="1664794622795" duration="336000" />
     </task>
     <servers />
   </component>

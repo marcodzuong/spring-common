@@ -22,7 +22,6 @@ public class JobServiceImpl implements JobService {
     }
 
 
-
     @Override
     public boolean addJob(QuartzJobDetail job) throws SchedulerException {
         if (job == null || job.isDisabled()) {
@@ -34,13 +33,14 @@ public class JobServiceImpl implements JobService {
             TriggerKey triggerKey = TriggerKey.triggerKey(job.getJobName(), job.getJobGroup());
             CronTrigger trigger = (CronTrigger) scheduler.getTrigger(triggerKey);
             if (trigger == null) {
-                //  Create new
+                //  schedule new Job
                 JobDetail jobDetail = JobBuilder.newJob(BaseJob.class).withIdentity(job.getJobName(), job.getJobGroup()).build();
                 jobDetail.getJobDataMap().put("job", job);
                 CronScheduleBuilder scheduleBuilder = CronScheduleBuilder.cronSchedule(job.getCronExpression());
                 trigger = TriggerBuilder.newTrigger().withIdentity(triggerKey).withSchedule(scheduleBuilder).build();
                 scheduler.scheduleJob(jobDetail, trigger);
             } else {
+                //  reschedule Job
                 CronScheduleBuilder scheduleBuilder = CronScheduleBuilder.cronSchedule(job.getCronExpression());
                 trigger = trigger.getTriggerBuilder().withIdentity(triggerKey).withSchedule(scheduleBuilder).build();
                 scheduler.rescheduleJob(triggerKey, trigger);
